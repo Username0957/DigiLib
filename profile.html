@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DigiLib — Profil</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1 class="topbar__title">DigiLib</h1>
+    </header>
+
+    <main class="container">
+      <section class="card profile">
+        <div class="avatar" aria-hidden="true">S</div>
+        <div class="profile__info">
+          <h2 class="section-title">Profil Siswa</h2>
+          <dl class="details">
+            <div>
+              <dt>Nama Lengkap</dt>
+              <dd>Budi Santoso</dd>
+            </div>
+            <div>
+              <dt>Kelas</dt>
+              <dd>XI IPA 2</dd>
+            </div>
+            <div>
+              <dt>NIS</dt>
+              <dd>20231234</dd>
+            </div>
+            <div>
+              <dt>Jumlah Buku Dipinjam</dt>
+              <dd><span class="badge">3 buku</span></dd>
+            </div>
+          </dl>
+          <div class="actions">
+            <a class="btn btn-primary" href="borrow.html">Lihat Peminjaman</a>
+            <a class="btn btn-ghost" href="index.html">Logout</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Navigasi bawah">
+      <a href="dashboard.html" aria-label="Dashboard">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M2.25 12l8.955-8.955a.75.75 0 011.06 0L21.22 12M4.5 9.75v10.5a1.5 1.5 0 001.5 1.5h3.75v-6h4.5v6H18a1.5 1.5 0 001.5-1.5V9.75" />
+        </svg>
+        <span class="sr-only">Dashboard</span>
+      </a>
+      <a href="search.html" aria-label="Pencarian">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 100-15 7.5 7.5 0 000 15z" />
+        </svg>
+        <span class="sr-only">Pencarian</span>
+      </a>
+      <a href="borrow.html" aria-label="Pinjam Buku">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 5.25A2.25 2.25 0 015.25 3H10.5v18H5.25A2.25 2.25 0 013 18.75V5.25zM13.5 21V3h5.25A2.25 2.25 0 0121 5.25v13.5A2.25 2.25 0 0118.75 21H13.5z" />
+        </svg>
+        <span class="sr-only">Pinjam</span>
+      </a>
+      <a class="active" href="profile.html" aria-label="Profil">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M15.75 7.5a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+          <path d="M4.5 20.25a7.5 7.5 0 0115 0" />
+        </svg>
+        <span class="sr-only">Profil</span>
+      </a>
+      <a href="index.html" aria-label="Logout">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6A2.25 2.25 0 005.25 5.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15" />
+          <path d="M12 9l3 3-3 3M15 12H3" />
+        </svg>
+        <span class="sr-only">Logout</span>
+      </a>
+    </nav>
+  </body>
+</html>

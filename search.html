@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DigiLib — Pencarian</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1 class="topbar__title">DigiLib</h1>
+      <form class="topbar__search" action="search.html" method="get" role="search">
+        <label class="sr-only" for="q">Cari buku</label>
+        <input id="q" name="q" type="search" placeholder="Cari buku, penulis..." />
+      </form>
+    </header>
+
+    <main class="container container--wide">
+      <aside class="filters" aria-labelledby="filter-title">
+        <h2 id="filter-title" class="filters__title">Filter</h2>
+
+        <div class="filter-group">
+          <h3 class="filter-group__title">Kategori</h3>
+          <label class="check"><input type="checkbox" /> Fiksi</label>
+          <label class="check"><input type="checkbox" /> Non-fiksi</label>
+          <label class="check"><input type="checkbox" /> Sains</label>
+          <label class="check"><input type="checkbox" /> Sejarah</label>
+          <label class="check"><input type="checkbox" /> Biografi</label>
+        </div>
+
+        <div class="filter-group">
+          <h3 class="filter-group__title">Penulis</h3>
+          <input class="input" type="text" placeholder="Nama penulis" />
+          <label class="check"><input type="checkbox" /> Stephen King</label>
+          <label class="check"><input type="checkbox" /> Agatha Christie</label>
+          <label class="check"><input type="checkbox" /> Malcolm Gladwell</label>
+        </div>
+
+        <div class="filter-actions">
+          <button class="btn btn-primary" type="button">Terapkan</button>
+          <button class="btn btn-ghost" type="reset">Reset</button>
+        </div>
+      </aside>
+
+      <section class="results" aria-labelledby="search-result">
+        <h2 id="search-result" class="section-title">Hasil Pencarian</h2>
+        <p class="muted">Menampilkan hasil untuk “Artificial Intelligence”</p>
+
+        <div class="grid grid--auto-cards">
+          <article class="book-card">
+            <div class="cover ph"></div>
+            <h4 class="book-card__title">Artificial Intelligence: A Modern Approach</h4>
+            <p class="book-card__meta">Peter Norvig — 2021</p>
+            <div class="book-card__actions">
+              <a class="btn btn-ghost" href="borrow.html">Detail</a>
+              <a class="btn btn-primary" href="borrow.html">Pinjam</a>
+            </div>
+          </article>
+          <article class="book-card">
+            <div class="cover ph"></div>
+            <h4 class="book-card__title">Pattern Recognition and ML</h4>
+            <p class="book-card__meta">C. Bishop — 2006</p>
+            <div class="book-card__actions">
+              <a class="btn btn-ghost" href="borrow.html">Detail</a>
+              <a class="btn btn-primary" href="borrow.html">Pinjam</a>
+            </div>
+          </article>
+          <article class="book-card">
+            <div class="cover ph"></div>
+            <h4 class="book-card__title">Life 3.0</h4>
+            <p class="book-card__meta">Max Tegmark — 2017</p>
+            <div class="book-card__actions">
+              <a class="btn btn-ghost" href="borrow.html">Detail</a>
+              <a class="btn btn-primary" href="borrow.html">Pinjam</a>
+            </div>
+          </article>
+          <article class="book-card">
+            <div class="cover ph"></div>
+            <h4 class="book-card__title">Deep Learning</h4>
+            <p class="book-card__meta">I. Goodfellow — 2016</p>
+            <div class="book-card__actions">
+              <a class="btn btn-ghost" href="borrow.html">Detail</a>
+              <a class="btn btn-primary" href="borrow.html">Pinjam</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Navigasi bawah">
+      <a href="dashboard.html" aria-label="Dashboard">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M2.25 12l8.955-8.955a.75.75 0 011.06 0L21.22 12M4.5 9.75v10.5a1.5 1.5 0 001.5 1.5h3.75v-6h4.5v6H18a1.5 1.5 0 001.5-1.5V9.75" />
+        </svg>
+        <span class="sr-only">Dashboard</span>
+      </a>
+      <a class="active" href="search.html" aria-label="Pencarian">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 100-15 7.5 7.5 0 000 15z" />
+        </svg>
+        <span class="sr-only">Pencarian</span>
+      </a>
+      <a href="borrow.html" aria-label="Pinjam Buku">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 5.25A2.25 2.25 0 015.25 3H10.5v18H5.25A2.25 2.25 0 013 18.75V5.25zM13.5 21V3h5.25A2.25 2.25 0 0121 5.25v13.5A2.25 2.25 0 0118.75 21H13.5z" />
+        </svg>
+        <span class="sr-only">Pinjam</span>
+      </a>
+      <a href="profile.html" aria-label="Profil">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M15.75 7.5a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+          <path d="M4.5 20.25a7.5 7.5 0 0115 0" />
+        </svg>
+        <span class="sr-only">Profil</span>
+      </a>
+      <a href="index.html" aria-label="Logout">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6A2.25 2.25 0 005.25 5.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15" />
+          <path d="M12 9l3 3-3 3M15 12H3" />
+        </svg>
+        <span class="sr-only">Logout</span>
+      </a>
+    </nav>
+  </body>
+</html>
