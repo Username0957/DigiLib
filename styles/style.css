@@ -1,20 +1,18 @@
-/* ==============================
-   Palet warna (maks 5 warna)
-   ============================== */
+
 :root {
-  --bg: #0b2f3a; /* dasar latar teal gelap */
-  --surface: #123d4b; /* permukaan/section */
-  --brand: #10b4a3; /* utama: aqua teal */
-  --text: #e6f1f5; /* teks utama */
-  --accent: #f59e0b; /* aksen amber */
+  --bg: #0b2f3a; 
+  --surface: #123d4b; 
+  --brand: #10b4a3; 
+  --text: #e6f1f5; 
+  --accent: #f59e0b; 
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-heading: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-/* Import 2 font Google untuk body & heading */
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700;800&display=swap");
 
-/* Reset ringan + tipografi */
+
 * {
   box-sizing: border-box;
 }
