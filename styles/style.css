@@ -1,3 +1,6 @@
+/* ==============================
+   Palet warna (maks 5 warna)
+   ============================== */
 :root {
   --bg: #0b2f3a; /* dasar latar teal gelap */
   --surface: #123d4b; /* permukaan/section */
@@ -142,7 +145,7 @@ a:hover {
   transform: translateY(1px);
 }
 .btn-primary {
-  background: linear-gradient(18deg, var(--brand), color-mix(in oklab, var(--brand) 80%, black 20%));
+  background: linear-gradient(150deg, var(--brand), color-mix(in oklab, var(--brand) 80%, black 20%));
   color: #eaeaea;
   border-color: color-mix(in oklab, var(--brand) 60%, black 40%);
   box-shadow: 0 10px 16px color-mix(in oklab, var(--brand) 24%, black 0%);
@@ -509,9 +512,8 @@ input::placeholder {
   stroke-linejoin: round;
 }
 .bottom-nav a.active {
-  border-radius: 10px 10px 0 0;
   color: #ffffff;
-  background: linear-gradient(18deg, var(--brand), color-mix(in oklab, var(--brand) 72%, black 28%));
+  background: linear-gradient(150deg, var(--brand), color-mix(in oklab, var(--brand) 72%, black 28%));
   box-shadow: 0 10px 16px color-mix(in oklab, var(--brand) 24%, black 0%);
 }
 .bottom-nav a:focus-visible {
@@ -524,4 +526,210 @@ input::placeholder {
 .container,
 .container--wide {
   margin-bottom: 112px; /* tingkatkan sedikit agar aman di perangkat kecil */
+}
+
+/* Modal (checkbox hidden + label) */
+.modal-toggle {
+  display: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background: color-mix(in oklab, black 60%, transparent);
+  backdrop-filter: blur(4px);
+  place-items: center;
+  padding: 16px;
+}
+
+.modal-toggle:checked + .modal {
+  display: grid;
+}
+
+.modal-content {
+  background: var(--surface);
+  border: 1px solid color-mix(in oklab, var(--text) 10%, transparent);
+  border-radius: 16px;
+  padding: 28px;
+  max-width: 480px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 20px 40px color-mix(in oklab, black 40%, transparent);
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text);
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  transition: background .2s ease;
+}
+
+.modal-close:hover {
+  background: color-mix(in oklab, var(--text) 10%, transparent);
+}
+
+.modal-title {
+  margin: 0 0 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  letter-spacing: .2px;
+}
+
+/* Detail Buku */
+.book-detail-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.book-icon {
+  width: 48px;
+  height: 48px;
+  fill: none;
+  stroke: var(--brand);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+.book-detail-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  letter-spacing: .2px;
+}
+
+.book-detail-subtitle {
+  margin: 4px 0 0;
+  font-size: 16px;
+  color: color-mix(in oklab, var(--text) 78%, black 22%);
+}
+
+.book-detail-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 900px) {
+  .book-detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.book-detail-info {
+  display: grid;
+  gap: 16px;
+}
+
+.info-box {
+  background: var(--surface);
+  border: 1px solid color-mix(in oklab, var(--brand) 40%, transparent);
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.info-box p {
+  margin: 0 0 10px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.info-box p:last-child {
+  margin-bottom: 0;
+}
+
+.info-box strong {
+  color: var(--brand);
+}
+
+.book-detail-stats {
+  display: grid;
+  gap: 12px;
+}
+
+.stat-item {
+  background: var(--surface);
+  border: 1px solid color-mix(in oklab, var(--text) 10%, transparent);
+  border-radius: 12px;
+  padding: 12px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: color-mix(in oklab, var(--text) 78%, black 22%);
+}
+
+.stat-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.book-detail-description {
+  display: grid;
+  gap: 16px;
+}
+
+.desc-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  letter-spacing: .2px;
+}
+
+.desc-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: color-mix(in oklab, var(--text) 88%, black 12%);
+  background: var(--surface);
+  border: 1px solid color-mix(in oklab, var(--brand) 30%, transparent);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.book-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.book-actions .btn {
+  flex: 1;
+  min-width: 140px;
+}
+
+@media (max-width: 520px) {
+  .book-actions {
+    flex-direction: column;
+  }
+
+  .book-actions .btn {
+    width: 100%;
+  }
 }

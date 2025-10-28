@@ -24,7 +24,8 @@
             <p class="book-card__meta">A. T. — 2020</p>
             <div class="book-card__actions">
               <span class="badge">Tersedia</span>
-              <a class="btn btn-primary" href="profile.html">Pinjam</a>
+              <!-- Ganti href dengan label untuk modal, tambah data-book -->
+              <label class="btn btn-primary" for="modal-borrow-1">Pinjam</label>
             </div>
           </article>
           <article class="book-card">
@@ -33,7 +34,7 @@
             <p class="book-card__meta">I. K. — 2019</p>
             <div class="book-card__actions">
               <span class="badge">Tersedia</span>
-              <a class="btn btn-primary" href="profile.html">Pinjam</a>
+              <label class="btn btn-primary" for="modal-borrow-2">Pinjam</label>
             </div>
           </article>
           <article class="book-card">
@@ -42,7 +43,7 @@
             <p class="book-card__meta">M. D. — 2015</p>
             <div class="book-card__actions">
               <span class="badge badge-warn">Antrian</span>
-              <a class="btn btn-ghost" href="profile.html">Detail</a>
+              <a class="btn btn-ghost" href="book-detail.html">Detail</a>
             </div>
           </article>
         </div>
@@ -75,6 +76,45 @@
         </ul>
       </section>
     </main>
+
+    <!-- Tambah modal untuk peminjaman buku (checkbox hidden + label) -->
+    <input type="checkbox" id="modal-borrow-1" class="modal-toggle" />
+    <div class="modal">
+      <div class="modal-content">
+        <label for="modal-borrow-1" class="modal-close">&times;</label>
+        <h2 class="modal-title">Proses Peminjaman Buku</h2>
+        <form class="form" action="borrow.html" method="post">
+          <div class="form-group">
+            <label for="name-1">Masukkan Nama</label>
+            <input id="name-1" type="text" placeholder="Masukkan Nama" required />
+          </div>
+          <div class="form-group">
+            <label for="pin-1">Masukkan PIN</label>
+            <input id="pin-1" type="password" placeholder="Masukkan PIN" required />
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Pinjam</button>
+        </form>
+      </div>
+    </div>
+
+    <input type="checkbox" id="modal-borrow-2" class="modal-toggle" />
+    <div class="modal">
+      <div class="modal-content">
+        <label for="modal-borrow-2" class="modal-close">&times;</label>
+        <h2 class="modal-title">Proses Peminjaman Buku</h2>
+        <form class="form" action="borrow.html" method="post">
+          <div class="form-group">
+            <label for="name-2">Masukkan Nama</label>
+            <input id="name-2" type="text" placeholder="Masukkan Nama" required />
+          </div>
+          <div class="form-group">
+            <label for="pin-2">Masukkan PIN</label>
+            <input id="pin-2" type="password" placeholder="Masukkan PIN" required />
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Pinjam</button>
+        </form>
+      </div>
+    </div>
 
     <nav class="bottom-nav" aria-label="Navigasi bawah">
       <a href="dashboard.html" aria-label="Dashboard">

@@ -44,7 +44,7 @@
 
       <section class="results" aria-labelledby="search-result">
         <h2 id="search-result" class="section-title">Hasil Pencarian</h2>
-        <p class="muted">Menampilkan hasil untuk “Artificial Intelligence”</p>
+        <p class="muted">Menampilkan hasil untuk "Artificial Intelligence"</p>
 
         <div class="grid grid--auto-cards">
           <article class="book-card">
@@ -52,8 +52,9 @@
             <h4 class="book-card__title">Artificial Intelligence: A Modern Approach</h4>
             <p class="book-card__meta">Peter Norvig — 2021</p>
             <div class="book-card__actions">
-              <a class="btn btn-ghost" href="borrow.html">Detail</a>
-              <a class="btn btn-primary" href="borrow.html">Pinjam</a>
+              <!-- Ganti href Detail ke halaman book-detail.html -->
+              <a class="btn btn-ghost" href="book-detail.html">Detail</a>
+              <label class="btn btn-primary" for="modal-borrow-search-1">Pinjam</label>
             </div>
           </article>
           <article class="book-card">
@@ -61,8 +62,8 @@
             <h4 class="book-card__title">Pattern Recognition and ML</h4>
             <p class="book-card__meta">C. Bishop — 2006</p>
             <div class="book-card__actions">
-              <a class="btn btn-ghost" href="borrow.html">Detail</a>
-              <a class="btn btn-primary" href="borrow.html">Pinjam</a>
+              <a class="btn btn-ghost" href="book-detail.html">Detail</a>
+              <label class="btn btn-primary" for="modal-borrow-search-2">Pinjam</label>
             </div>
           </article>
           <article class="book-card">
@@ -70,8 +71,8 @@
             <h4 class="book-card__title">Life 3.0</h4>
             <p class="book-card__meta">Max Tegmark — 2017</p>
             <div class="book-card__actions">
-              <a class="btn btn-ghost" href="borrow.html">Detail</a>
-              <a class="btn btn-primary" href="borrow.html">Pinjam</a>
+              <a class="btn btn-ghost" href="book-detail.html">Detail</a>
+              <label class="btn btn-primary" for="modal-borrow-search-3">Pinjam</label>
             </div>
           </article>
           <article class="book-card">
@@ -79,13 +80,90 @@
             <h4 class="book-card__title">Deep Learning</h4>
             <p class="book-card__meta">I. Goodfellow — 2016</p>
             <div class="book-card__actions">
-              <a class="btn btn-ghost" href="borrow.html">Detail</a>
-              <a class="btn btn-primary" href="borrow.html">Pinjam</a>
+              <a class="btn btn-ghost" href="book-detail.html">Detail</a>
+              <label class="btn btn-primary" for="modal-borrow-search-4">Pinjam</label>
             </div>
           </article>
         </div>
       </section>
     </main>
+
+    <!-- Tambah modal untuk setiap buku di search -->
+    <input type="checkbox" id="modal-borrow-search-1" class="modal-toggle" />
+    <div class="modal">
+      <div class="modal-content">
+        <label for="modal-borrow-search-1" class="modal-close">&times;</label>
+        <h2 class="modal-title">Proses Peminjaman Buku</h2>
+        <form class="form" action="search.html" method="post">
+          <div class="form-group">
+            <label for="name-s1">Masukkan Nama</label>
+            <input id="name-s1" type="text" placeholder="Masukkan Nama" required />
+          </div>
+          <div class="form-group">
+            <label for="pin-s1">Masukkan PIN</label>
+            <input id="pin-s1" type="password" placeholder="Masukkan PIN" required />
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Pinjam</button>
+        </form>
+      </div>
+    </div>
+
+    <input type="checkbox" id="modal-borrow-search-2" class="modal-toggle" />
+    <div class="modal">
+      <div class="modal-content">
+        <label for="modal-borrow-search-2" class="modal-close">&times;</label>
+        <h2 class="modal-title">Proses Peminjaman Buku</h2>
+        <form class="form" action="search.html" method="post">
+          <div class="form-group">
+            <label for="name-s2">Masukkan Nama</label>
+            <input id="name-s2" type="text" placeholder="Masukkan Nama" required />
+          </div>
+          <div class="form-group">
+            <label for="pin-s2">Masukkan PIN</label>
+            <input id="pin-s2" type="password" placeholder="Masukkan PIN" required />
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Pinjam</button>
+        </form>
+      </div>
+    </div>
+
+    <input type="checkbox" id="modal-borrow-search-3" class="modal-toggle" />
+    <div class="modal">
+      <div class="modal-content">
+        <label for="modal-borrow-search-3" class="modal-close">&times;</label>
+        <h2 class="modal-title">Proses Peminjaman Buku</h2>
+        <form class="form" action="search.html" method="post">
+          <div class="form-group">
+            <label for="name-s3">Masukkan Nama</label>
+            <input id="name-s3" type="text" placeholder="Masukkan Nama" required />
+          </div>
+          <div class="form-group">
+            <label for="pin-s3">Masukkan PIN</label>
+            <input id="pin-s3" type="password" placeholder="Masukkan PIN" required />
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Pinjam</button>
+        </form>
+      </div>
+    </div>
+
+    <input type="checkbox" id="modal-borrow-search-4" class="modal-toggle" />
+    <div class="modal">
+      <div class="modal-content">
+        <label for="modal-borrow-search-4" class="modal-close">&times;</label>
+        <h2 class="modal-title">Proses Peminjaman Buku</h2>
+        <form class="form" action="search.html" method="post">
+          <div class="form-group">
+            <label for="name-s4">Masukkan Nama</label>
+            <input id="name-s4" type="text" placeholder="Masukkan Nama" required />
+          </div>
+          <div class="form-group">
+            <label for="pin-s4">Masukkan PIN</label>
+            <input id="pin-s4" type="password" placeholder="Masukkan PIN" required />
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Pinjam</button>
+        </form>
+      </div>
+    </div>
 
     <nav class="bottom-nav" aria-label="Navigasi bawah">
       <a href="dashboard.html" aria-label="Dashboard">
