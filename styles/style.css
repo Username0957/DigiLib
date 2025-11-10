@@ -123,6 +123,7 @@ a:hover {
 .ph {
   background: color-mix(in oklab, var(--text) 18%, transparent);
   border-radius: 10px;
+  backgroud-image: url('https://www.google.com/imgres?q=artificial%20intelligence&imgurl=https%3A%2F%2Fdesaplembutan.gunungkidulkab.go.id%2Fassets%2Ffiles%2Fartikel%2Fsedang_1676695344What-is-M.Tech-in-Artificial-Intelligence_AI.jpg&imgrefurl=https%3A%2F%2Fdesaplembutan.gunungkidulkab.go.id%2Ffirst%2Fartikel%2F2059-Mengenal-Artificial-Intelligence--Kecerdasan-Buatan-&docid=7LcfpygStVRvVM&tbnid=eq0HkwS96cmRSM&vet=12ahUKEwiP6c7f4OaQAxUWwTgGHR5kCLYQM3oECBwQAA..i&w=800&h=532&hcb=2&ved=2ahUKEwiP6c7f4OaQAxUWwTgGHR5kCLYQM3oECBwQAA') ;
 }
 
 /* Tombol */
